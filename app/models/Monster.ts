@@ -6,7 +6,13 @@ import { withSetPropAction } from "./helpers/withSetPropAction"
  */
 export const MonsterModel = types
   .model("Monster")
-  .props({})
+  .props({
+    monsterName: types.string.isRequired,
+    monsterNamePlural: types.string,
+    number: types.number,
+    dieSides: types.number,
+    numberOfDie: types.number,
+  })
   .actions(withSetPropAction)
   .views((self) => ({})) // eslint-disable-line @typescript-eslint/no-unused-vars
   .actions((self) => ({})) // eslint-disable-line @typescript-eslint/no-unused-vars
